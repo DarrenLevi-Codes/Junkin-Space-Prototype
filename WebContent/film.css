@@ -1,0 +1,132 @@
+@charset "UTF-8";
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin-top: 0;
+}
+
+/*for rating colors*/
+.movie-info span {
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-info span.green {
+    color: lightgreen;
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+/*overview pop*/
+.overview {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(39, 42, 96);
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%); /*push it down */
+    transition: transform 0.3s ease-in; /*transition overview pop*/
+    color: white;
+}
+
+.know-more{
+  background-color: #9538ff;
+  border: 0;
+  color: #fefbef;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 1.2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: block;
+}
+
+.know-more:disabled {
+    pointer-events: none;
+  }
+  
+  .know-more:hover {
+    box-shadow: rgba(44, 40, 40, 0.25) 0 8px 15px;
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+  }
+  
+  .know-more:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+.movie:hover .overview {
+    transform: translateY(0)
+} 
+
+/* Genre tags */
+#tags {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.tag {
+    color: white;
+    padding: 10px 20px;
+    background-color: rgb(48, 53, 108);
+    border-radius: 10px;
+    margin: 5px;
+    display: inline-block;
+    cursor:pointer;
+}
+
+.tag:hover{
+    background-color: var(--primary-color);
+    transition: 0.5s;
+}
+
+.tag.highlight {
+    background-color: #373b69;
+}
+
+.no-results {
+    color: white;
+}
