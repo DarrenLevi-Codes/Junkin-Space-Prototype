@@ -11,7 +11,7 @@ public class ConnessioneDb {
     private static final int PORT = 3306; // porta
     private static final String SERVER_NAME = "localhost"; // indirizzo server MySqlWorkbench
     private static final String USERNAME = "root"; // username
-    private static final String PASSWORD = "JAITA124"; // password
+    private static final String PASSWORD = "XXXXXXX"; // password
 
     // Metodo per ottenere una nuova connessione al database
     public static Connection getCon() throws SQLException {
